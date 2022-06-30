@@ -1,0 +1,64 @@
+# ./docker-compose.yml
+
+version: '3.6'
+
+services:
+#  db:
+#    image:  mysql
+#    command: --default-authentication-plugin=mysql_native_password
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: GolanDb
+#      MYSQL_USER: mami
+#      MYSQL_PASSWORD: Mami.zzy**95
+#      TZ: Europe/Istanbul
+#    volumes:
+#      - ./init:/docker-entrypoint-initdb.d
+#      - db:/var/lib/mysql
+#    ports:
+#      - "3306:3306"
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mamizzy
+      - MONGO_INITDB_ROOT_PASSWORD=mamizzy
+    volumes:
+      - type: volume
+        source: mongodb_data_volume
+        target: /data/db
+    ports:
+      - "27017:27017"
+  #  elasticsearch:
+  #    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+  #    environment:
+  #      - cluster.name=docker-cluster
+  #      - bootstrap.memory_lock=true
+  #      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  #    ulimits:
+  #      memlock:
+  #        soft: -1
+  #        hard: -1
+  #    ports:
+  #      - "9200:9200"
+  #  kibana:
+  #    image: docker.elastic.co/kibana/kibana:6.3.2
+  #    ports:
+  #      - "5601:5601"
+  #redis:
+  # image: redis:4-alpine
+  # command: redis-server --requirepass 12345
+  # ports:
+  #   - "6379:6379"
+
+  # favor.customer.api:
+  #  image: ${DOCKER_REGISTRY-}favorcustomerapi
+  #  ports:
+  #    - "8082:82"
+  #  build:
+  #    context: .
+  #    dockerfile: Favor.CustomerApi/Dockerfile
+
+volumes:
+  mongodb_data_volume:

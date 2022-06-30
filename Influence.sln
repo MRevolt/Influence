@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Influence.AdminApi", "Influence.AdminApi\Influence.AdminApi.csproj", "{4938EF3A-957D-4EF2-B347-9BFA3C7B65F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Influence.Service", "Influence.Service\Influence.Service.csproj", "{BC1DDCC8-C473-4883-A345-266CB98DB627}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4938EF3A-957D-4EF2-B347-9BFA3C7B65F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4938EF3A-957D-4EF2-B347-9BFA3C7B65F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4938EF3A-957D-4EF2-B347-9BFA3C7B65F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4938EF3A-957D-4EF2-B347-9BFA3C7B65F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC1DDCC8-C473-4883-A345-266CB98DB627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1DDCC8-C473-4883-A345-266CB98DB627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1DDCC8-C473-4883-A345-266CB98DB627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1DDCC8-C473-4883-A345-266CB98DB627}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
