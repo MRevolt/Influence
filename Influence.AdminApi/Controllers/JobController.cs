@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Influence.AdminApi.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class JobController : ControllerBase
+
+public class JobController : AdminController
 {
     private readonly IJobService _jobsService;
 

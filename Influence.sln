@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Influence.AdminApi", "Influ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Influence.Service", "Influence.Service\Influence.Service.csproj", "{BC1DDCC8-C473-4883-A345-266CB98DB627}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Influence.Model", "Influence.Model\Influence.Model.csproj", "{542B0C26-84BB-4733-868B-AB84D6F719BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Influence.UserApi", "Influence.UserApi\Influence.UserApi.csproj", "{A7C826A3-57FC-452C-B5B1-6CA28597102D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{BC1DDCC8-C473-4883-A345-266CB98DB627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC1DDCC8-C473-4883-A345-266CB98DB627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC1DDCC8-C473-4883-A345-266CB98DB627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{542B0C26-84BB-4733-868B-AB84D6F719BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{542B0C26-84BB-4733-868B-AB84D6F719BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{542B0C26-84BB-4733-868B-AB84D6F719BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{542B0C26-84BB-4733-868B-AB84D6F719BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C826A3-57FC-452C-B5B1-6CA28597102D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C826A3-57FC-452C-B5B1-6CA28597102D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C826A3-57FC-452C-B5B1-6CA28597102D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C826A3-57FC-452C-B5B1-6CA28597102D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

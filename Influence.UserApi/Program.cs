@@ -6,14 +6,15 @@ using Influence.Model;
 using Influence.Service;
 using Influence.Service.Configuration;
 using Influence.Service.Dependencies;
+using Influence.UserApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 
-builder.Services.UseConfigurator(builder.Configuration); 
-builder.Services.AddMvc(options => { options.Filters.Add<AdminAuthFilter>(); }).AddJsonOptions(options =>
+builder.Services.UseConfigurator(builder.Configuration,"User"); 
+builder.Services.AddMvc(options => { options.Filters.Add<UserAuthFilter>(); }).AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
     })
@@ -22,7 +23,7 @@ builder.Services.AddMvc(options => { options.Filters.Add<AdminAuthFilter>(); }).
 
 builder.Services.AddAuthorizationCore(options =>
 {
-    options.AddPolicy(PolicyEnum.AdminPolicy.ToString(),
+    options.AddPolicy(PolicyEnum.UserPolicy,
         policy => policy.RequireClaim(ClaimTypes.UserData).RequireClaim("RefreshToken")
             .RequireClaim("MemberId").RequireClaim("RoleId"));
 });

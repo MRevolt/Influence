@@ -1,11 +1,13 @@
+using Influence.Service.Configuration;
 using Influence.Service.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using ISingletonService = Influence.Service.Dependencies.ISingletonService;
 
 namespace Influence.Service.Services;
 
 
-public class JobService :IJobService
+public class JobService :IJobService,ISingletonService
 {
     private readonly IMongoCollection<Job> _jobsCollection;
 
@@ -28,7 +30,7 @@ public class JobService :IJobService
     }
        
 
-    public async Task<Job?> GetAsync(string id) =>
+    public async Task<Job> GetAsync(string id) =>
         await _jobsCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
     public async Task CreateAsync(Job newJob) =>

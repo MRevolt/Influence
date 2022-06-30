@@ -1,4 +1,4 @@
-namespace Influence.Service;
+namespace Influence.Service.Configuration;
 
 public class MongoDBSettings {
 
